@@ -1,0 +1,20 @@
+// core
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/base';
+
+//elements
+@import 'elements/brand';
+@import 'elements/rating';
+@import 'elements/colors';
+@import 'elements/counter';
+@import 'elements/slider';
+@import 'elements/basket';
+@import 'elements/subtotal';
+
+//section
+@import 'sections/card';
+@import 'sections/info';
+@import 'sections/demo';
+@import 'sections/popup';
+@import 'sections/popup-card';

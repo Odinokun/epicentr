@@ -1,0 +1,18 @@
+extends ../_template
+
+block variables
+  - var title       = 'Odinokun.com'
+  - var description = 'Odinokun.com'
+  - var ogtitle     = 'Odinokun.com'
+  - var ogimage     = ''
+
+block content
+  main.main
+    .main__basket
+      include ../elements/basket
+    include ../sections/card
+
+  .popup-layer#popup-layer
+  .popup-wrap#popup-wrap
+    include ../sections/popup
+

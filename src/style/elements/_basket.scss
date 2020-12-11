@@ -1,0 +1,32 @@
+.basket {
+  position: relative;
+}
+
+.basket__icon {
+  svg {
+    stroke: #333;
+    width: 22px;
+    height: 27px;
+    stroke-width: 2px;
+  }
+}
+
+.basket__counter {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  position: absolute;
+  top: -13px;
+  right: -35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 1px 0 0 1px;
+  letter-spacing: 1.2px;
+  opacity: .9;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #536dfe;
+}

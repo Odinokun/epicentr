@@ -1,0 +1,19 @@
+.subtotal {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtotal__text {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  letter-spacing: .6px;
+  color: #818181;
+}
+
+.subtotal__price {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .63px;
+  color: $red;
+}

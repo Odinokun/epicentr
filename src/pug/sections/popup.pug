@@ -1,0 +1,37 @@
+mixin popup-card(pic, submodel)
+  //begin popup-card
+  .popup-card
+    button.popup-card__close
+      +svg('close')
+    a(href="#").popup-card__img
+      img(src="assets/img/product-" + pic + "-sm.jpg" alt="product")
+    a(href="#").popup-card__model Momentum<sup>&#174;</sup>
+    a(href="#").popup-card__submodel #{submodel}
+    .popup-card__price $499.95
+    .popup-card__counter
+      include ../elements/counter-sm
+  //end popup-card
+
+//begin popup
+.popup
+  //begin popup__header
+  .popup__header.popup-header
+    .popup-header__basket
+      include ../elements/basket
+    .popup-header__subtotal
+      include ../elements/subtotal
+  //end popup__header
+    
+  //begin popup__cards
+  .popup__cards
+    +popup-card('01', 'Wireless Black')
+    +popup-card('02', 'Wireless Ivory')
+  //end popup__cards
+
+  //begin popup__footer
+  .popup__footer.popup-footer
+    span.popup-footer__text Your order qualifies for FREE Shipping Choose this option at checkout.
+    a(href="#").popup-footer__link See details
+    button.popup-footer__btn.btn Proceed to checkout
+  //end popup__footer
+//end popup

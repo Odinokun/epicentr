@@ -1,0 +1,11 @@
+.brand {
+  display: block;
+  max-width: 184px;
+  &:focus {
+    outline: 1px solid $red;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}

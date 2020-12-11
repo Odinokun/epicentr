@@ -1,0 +1,17 @@
+mixin slider__slide(pic)
+  .slider__slide.swiper-slide
+    img(src="assets/img/slider/product-" + pic + ".jpg" alt="headphones")
+
+//begin slider
+.slider.swiper-container
+  .swiper-wrapper
+    +slider__slide('01')
+    +slider__slide('02')
+    +slider__slide('03')
+
+  .swiper-button-prev
+    +svg('arrow-left')
+  .swiper-button-next
+    +svg('arrow-left')
+  .swiper-pagination
+//end slider

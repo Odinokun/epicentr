@@ -1,0 +1,32 @@
+.rating {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.rating__item {
+  overflow: hidden;
+  flex: none;
+  width: 11px;
+  height: 11px;
+  margin-right: 5px;
+  list-style: none;
+  cursor: pointer;
+  transition: background-color .5s;
+  border-radius: 50%;
+  background-color: #ccc;
+  &:last-child {
+    margin-right: 0;
+  }
+  &.active {
+    background-color: $yellow;
+  }
+}
+
+.rating__input {
+  display: block;
+  width: 11px;
+  height: 11px;
+  cursor: pointer;
+  opacity: 0;
+}

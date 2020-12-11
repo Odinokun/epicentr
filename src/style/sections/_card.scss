@@ -1,0 +1,41 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  padding: 106px 15px 40px 15px;
+  background-color: #fff;
+  box-shadow: 4px 7px 18px #0d1333;
+
+  @include min(768) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    flex-direction: row;
+    align-items: stretch;
+    width: 95%;
+    max-width: 800px;
+    min-height: 600px;
+    padding: 47px 30px;
+    transform: translate(-50%, -50%);
+    box-shadow: 25px 43px 70px #0d1333;
+  }
+}
+
+.card__brand {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card__basket {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+
+  @include min(1090) {
+    display: none;
+  }
+}

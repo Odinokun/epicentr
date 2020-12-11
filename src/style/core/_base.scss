@@ -1,0 +1,150 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $roboto;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.38;
+  letter-spacing: .25px;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  strong {
+    font-weight: 700;
+  }
+}
+
+button {
+  border-radius: 0 !important;
+}
+
+svg {
+  display: block;
+  overflow: visible;
+}
+
+//изменяем цвет выделения текста мышью
+::selection {
+  color: #fff;
+  background-color: $brand;
+  text-shadow: none;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 15px 0;
+  background-color: $brand;
+}
+
+.main__basket {
+  position: absolute;
+  top: 60px;
+  right: 100px;
+  display: none;
+
+  @include min(1090) {
+    display: block;
+  }
+  .basket__icon {
+    svg {
+      stroke: #fff;
+    }
+  }
+}
+
+.btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 29px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .5s;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  letter-spacing: .42px;
+  color: #fff;
+  border: none;
+  border-radius: 0 !important;
+  background-color: #536dfe;
+  box-shadow: none;
+  &:focus {
+    outline: 1px solid $red;
+  }
+  &:hover {
+    background-color: $brand;
+  }
+}
+
+.popup-layer {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transition: opacity .5s;
+  pointer-events: none;
+  opacity: 0;
+  background-color: #000;
+  &.active {
+    pointer-events: auto;
+    opacity: .5;
+  }
+}
+
+.popup-wrap {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  display: flex;
+  overflow: auto;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 280px;
+  height: 100vh;
+  padding: 0 15px 0 15px;
+  transition: transform .5s;
+  transform: translateX(100%);
+  background-color: #fff;
+
+  @include min(768) {
+    max-width: 370px;
+    padding: 0 15px 0 25px;
+  }
+  &.active {
+    transform: translateX(0);
+  }
+}
