@@ -1,6 +1,4 @@
-﻿# My portfolio site
-
-Author: <a href="http://odinokun.com" target="_blank">Odinokun</a>
+﻿Author: <a href="http://odinokun.com" target="_blank">Odinokun</a>
 
 ## Technologies:
 * Gulp 4.0
